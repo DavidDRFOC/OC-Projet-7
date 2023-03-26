@@ -1,0 +1,46 @@
+.host {
+  display: flex;
+  justify-content: flex-end;
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    margin-right: 10px;
+
+    @include media-query(medium) {
+        font-size: 15px;
+        line-height: 21.5px;
+      }
+
+    @include media-query(small) {
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+
+  &__firstname,
+  &__lastname {
+    margin: 0;
+    text-align: end;
+  }
+
+  &__picture {
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+
+    @include media-query(medium) {
+        height: 48px;
+        width: 48px;
+      }
+
+    @include media-query(small) {
+      height: 32px;
+      width: 32px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.thumbnail {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  height: 340px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  
+  @include media-query(small) {
+   height: 255px;
+   min-width: 335;
+   max-width: none;
+  }
+
+  &__img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+    border-radius: inherit;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    margin: 15px 20px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}

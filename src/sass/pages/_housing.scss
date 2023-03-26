@@ -1,0 +1,86 @@
+.housing {
+  color: $primary-color;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-top: 30px;
+
+    @include media-query(medium) {
+      display: block;
+      margin-bottom: auto;
+    }
+  }
+  &__title {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51px;
+
+    @include media-query(medium) {
+      font-size: 27px;
+      line-height: 38.5px;
+    }
+    @include media-query(small) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  &__location {
+    margin: 0;
+    line-height: 26px;
+    font-size: 18px;
+    font-weight: 500;
+
+    @include media-query(medium) {
+      font-size: 16px;
+      line-height: 23px;
+    }
+
+    @include media-query(small) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-query(medium) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__ratingHost {
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+
+    @include media-query(medium) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    @include media-query(small) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__dropdowns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    column-gap: 76px;
+
+    @include media-query(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media-query(small) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

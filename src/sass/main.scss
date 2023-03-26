@@ -1,0 +1,34 @@
+// UTILS
+@import "./utils/_variables";
+@import "./utils/_mixins";
+
+// BASE
+@import "./base/_base";
+@import "./base/_typography";
+
+// COMPONENTS
+@import "./component/_banner";
+@import "./component/_dropdown";
+@import "./component/_rate";
+@import "./component/_host";
+@import "./component/_carousel";
+@import "./component/_tag";
+@import "./component/_thumbnail";
+
+//LAYOUT
+@import "./layouts/_header";
+@import "./layouts/_footer";
+
+// PAGES
+@import "./pages/_home";
+@import "./pages/_error";
+@import "./pages/_housing";
+
+
+
+
+
+
+
+
+

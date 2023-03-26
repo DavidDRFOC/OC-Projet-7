@@ -1,0 +1,133 @@
+.main__dropdowns {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.dropdown {
+  color: white;
+  margin-bottom: 20px;
+  max-width: 1023px;
+  @for $c from 1 through 4 {
+    &:nth-of-type(#{$c}) {
+      $delay: 100ms * $c;
+      animation: drop 500ms $delay both;
+      transform-origin: center;
+    }
+    @include media-query(medium) {
+      max-width: 679px;
+    }
+    @include media-query(small) {
+      //max-width: 335px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+    color: #f7f7f7;
+    width: 100%;
+    height: 47px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+
+    @include media-query(medium) {
+      max-width: 679px;
+    }
+
+    @include media-query(small) {
+      //max-width: 335px;
+      max-height: 30px;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+
+    @include media-query(medium) {
+      font-size: 18.5px;
+    }
+    @include media-query(small) {
+      font-size: 13px;
+    }
+  }
+
+  &__arrow {
+    transition: transform 500ms;
+    pointer-events: none; //permet de cliquer dessus
+    //width: 15.56px;
+    //height: 26px;
+    @include media-query(medium) {
+      width: 13px;
+      height: 19.5px;
+    }
+
+    @include media-query(small) {
+      width: 8px;
+      height: 15px;
+    }
+  }
+
+  &__content {
+    color: $primary-color;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 200ms ease-out, padding 300ms ease-out;
+    padding-left: 10px;
+  }
+  &__text {
+    font-size: 18px;
+    margin: 0;
+
+    @include media-query(medium) {
+      font-size: 15px;
+    }
+
+    @include media-query(small) {
+      font-size: 12px;
+    }
+  }
+  &__list {
+    font-size: 18px;
+    line-height: 26px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    @include media-query(medium) {
+      font-size: 15px;
+    }
+
+    @include media-query(small) {
+      font-size: 12px;
+    }
+  }
+  &__list-element {
+    line-height: 26px;
+  }
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.show {
+  max-height: 500px;
+  padding: 24px 12px 12px 12px;
+  transition: max-height 200ms ease-in-out, padding 300ms ease-in-out;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
